@@ -22,7 +22,7 @@ print $json->encode($json->allow_blessed->convert_blessed->allow_nonref->utf8->r
 exit;
 
 sub fetchCurrent{
-	my $rrd = "$graphDir"."battery.rrd";
+	my $rrd = "$graphDir"."rpi_stats.rrd";
     	my $cf = "AVERAGE";
     	$o = 0;
 	my ($start,$step,$dsnames,$data) = RRDs::fetch ("$rrd", "$cf", "-r $resolution", "-s $interval", "-e now");
